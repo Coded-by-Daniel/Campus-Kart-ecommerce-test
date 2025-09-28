@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusKart - Your Campus Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">CK</span>
+          <span class="logo-text">Campus-Kart</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+  <a href="index.html#home" class="nav-link">Home</a>
+  <a href="shop.html" class="nav-link">Shop</a>
+  <a href="index.html#categories" class="nav-link">Categories</a>
+  <a href="index.html#about" class="nav-link">About</a>
+</nav>
+
+
+      <div class="search-container">
+        <input type="text" id="search-bar" class="search-bar" placeholder="Search for products...">
+        <button class="search-btn" id="search-btn">🔍</button>
+      </div>
+
+      <div class="cart-container">
+        <a href="cart.html" class="cart-link">
+          🛒    <span id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Your Campus <span class="hero-highlight">Marketplace</span></h1>
+      <p class="hero-subtitle">
+        Buy <!--and sell --> books, gadgets, fashion, food, and essentials. 
+        Safe, trusted, and delivered to you any where on campus<!-- your hostel-->.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="start-shopping-btn">Start Shopping</button>
+        <button class="btn btn-secondary">Order on WhatsApp</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students studying">
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-subtitle">Find exactly what you need for campus life</p>
+      <div class="category-grid">
+        <div class="category-card">
+          <h3>Books</h3>
+          <p>Academic & Fiction</p>
+        </div>
+        <div class="category-card">
+          <h3>Fashion</h3>
+          <p>Clothes & Accessories</p>
+        </div>
+        <div class="category-card">
+          <h3>Electronics</h3>
+          <p>Gadgets & Tech</p>
+        </div>
+        <div class="category-card">
+          <h3>Food</h3>
+          <p>Snacks & Meals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured" id="shop">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+      <p class="section-subtitle">Handpicked items for students</p>
+
+      <!-- Product Filter Buttons -->
+      <div class="product-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="electronics">Electronics</button>
+        <button class="filter-btn" data-filter="books">Books</button>
+        <button class="filter-btn" data-filter="fashion">Fashion</button>
+      </div>
+
+      <!-- Dynamic Product List -->
+      <div id="product-list" class="products-grid"></div>
+
+      <button class="btn btn-primary view-all-btn" onclick="window.location='shop.html'">View All Products</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About CampusKart</h2>
+      <p class="about-intro">
+        Hi, I'm daniel, a 300L student at University of uyo. 
+        I started CampusKart to make it easy for students to get affordable items delivered in school and to their hostels.
+      </p>
+<!-- Promise Section -->
+<section class="promise">
+  <div class="container">
+    <div class="promise-card">
+      <h3>Our Promise</h3>
+      <div class="promise-methods">
+        <div class="promise-method">
+          <span class="promise-icon">🛡️</span>
+          <div>
+            <strong>Safe & Trusted</strong><br>
+            <small>All sellers verified, secure transactions guaranteed</small>
+          </div>
+        </div>
+        <div class="promise-method">
+          <span class="promise-icon">🚀</span>
+          <div>
+            <strong>Fast Delivery</strong><br>
+            <small>Free pickup at hostel / ₦200 within campus</small>
+          </div>
+        </div>
+        <div class="promise-method">
+          <span class="promise-icon">🔄</span>
+          <div>
+            <strong>Easy Returns</strong><br>
+            <small>If your item is damaged, we replace it within 24 hours</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Payment Section -->
+  <section class="payment">
+    <div class="container">
+      <div class="payment-card">
+        <h3>Payment Options</h3>
+        <div class="payment-methods">
+          <div class="payment-method">💵 Cash on Delivery</div>
+          <div class="payment-method">🏦 Bank Transfer</div>
+          <div class="payment-method">📱 Mobile Money</div>
+        </div>
+        <button class="btn btn-success whatsapp-btn">Order Now on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Students Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐ 5.0</div>
+          <p>"Got my sneakers in 20 mins, very reliable! Will definitely order again."</p>
+          <div class="reviewer">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Ade">
+            <div><strong>Ade</strong><span>200L Engineering</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐ 5.0</div>
+          <p>"Good quality shirt and fast delivery. The prices are very student-friendly."</p>
+          <div class="reviewer">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80" alt="Mariam">
+            <div><strong>Mariam</strong><span>100L Nursing</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐ 5.0</div>
+          <p>"Perfect textbooks for my course. Saved me a lot compared to the bookshop."</p>
+          <div class="reviewer">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="Kemi">
+            <div><strong>Kemi</strong><span>300L Law</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">CK</span>
+            <span class="logo-text">CampusKart</span>
+          </div>
+          <p>Your trusted campus marketplace for books, gadgets, fashion, and more.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#categories">Books</a></li>
+            <li><a href="#categories">Fashion</a></li>
+            <li><a href="#categories">Electronics</a></li>
+            <li><a href="#categories">Food</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📞 +2349160613168</p>
+          <p>✉️ hello@campuskart.ng</p>
+          <p>📍 University of Uyo</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CampusKart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+<a href="https://api.whatsapp.com/send?phone=+2349160613168&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20CampusKart." 
+   class="whatsapp-float" target="_blank"> 
+  <i class="fa fa-whatsapp"></i>
+</a>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
