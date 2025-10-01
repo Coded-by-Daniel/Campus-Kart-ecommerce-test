@@ -298,3 +298,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.btn, button');
     buttons.forEach(addClickAnimation);
 });
+
+// Flash Sale Daily Countdown
+let countdownTime = new Date().getTime() + 2 * 60 * 60 * 1000;
+
+let timer = setInterval(function () {
+  let now = new Date().getTime();
+  let distance = countdownTime - now;
+
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("flash-timer").innerHTML = "Expired!";
+    return;
+  }
+
+  let hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+  let minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+  let seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+
+  document.getElementById("flash-timer").innerHTML = `${hours}:${minutes}:${seconds}`;
+}, 1000);
