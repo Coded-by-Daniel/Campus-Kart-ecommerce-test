@@ -722,34 +722,91 @@ body {
     color: #94a3b8;
 }
 
-/* WhatsApp Floating Button */
+/* WhatsApp Float Button */
 .whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25d366; /* WhatsApp green */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;      /* set fixed width */
+    height: 60px;     /* set fixed height */
+    background-color: #25d366;
+    border-radius: 50%;  /* makes it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+/* Flash Sale Banner */
+.flash-sale-banner {
+  background: linear-gradient(90deg, #ff1e56, #ffac41);
   color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 1000;
-  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.flash-sale-content {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+  gap: 20px;
+  animation: slide-left 15s linear infinite;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+.flash-sale-banner img {
+  height: 50px;
+  border-radius: 6px;
 }
 
-.whatsapp-float i {
-  font-size: 28px;
-  line-height: 1;
+.timer-box {
+  background: #000;
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+#flash-timer {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;  /* White text */
+  font-family: "Courier New", monospace;
+  text-shadow: 
+    0 0 6px #00eaff,   /* glowing cyan glow */
+    0 0 12px #00eaff, 
+    0 0 20px #00eaff;
+}
+
+/* Sliding Animation */
+@keyframes slide-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Responsive Design */
